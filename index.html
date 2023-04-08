@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating</title>
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon"/>
+    <style>
+   html{
+    background-color: hsl(216, 12%, 8%);
+    color: hsl(217, 12%, 63%);
+    margin: 0;
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: white;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.question{
+    font-size: 1.75rem;
+}
+
+.ask{
+  line-height: 1.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+main{
+    max-width: 22rem;
+    height: 23rem;
+    background-color: hsl(213, 19%, 18%);
+    padding: 1rem 1.5rem 0rem 1.5rem;
+    margin: 0 1rem;
+    border-radius: 15px;
+}
+
+main>*{
+    max-width: 21.75rem
+}
+
+form{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap;
+}
+
+label{
+    background-color: hsl(213, 19%, 23%);
+    height: 2.75rem;
+    width: 2.75rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(217, 12%, 63%);
+}
+
+input{
+    display: none;
+}
+
+input:checked + label{
+    transition: all 0.5s;
+    background-color: hsl(217, 12%, 63%);
+    color: white;
+}
+
+@media (hover: hover) {
+    form label:hover{
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+    cursor: pointer;
+    }  
+}
+
+
+button{
+    border: none;
+    background-color: hsl(25, 97%, 53%);
+    width: 100%;
+    height: 2.75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    color: white;
+    letter-spacing: 0.15rem;
+    font-weight: 600;
+}
+
+button:hover{
+    color: hsl(25, 97%, 53%);
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.star{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(213, 19%, 23%);
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    margin-top: 0.75rem;
+}
+
+
+.thank-you{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.illu{
+    margin-top: 1rem;
+}
+
+.selection-outer{
+    margin-top: 1.5rem;
+    background-color: hsl(213, 19%, 23%);
+    border-radius: 15px;
+    height: 2rem;
+    width: 11.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selection{
+    color: hsl(25, 97%, 53%);
+    
+}
+
+.msg{
+   text-align: center;
+   margin-top: 7px;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
+
+.attribution {
+    font-size: 11px; text-align: center;
+    color: white;
+}
+.attribution a {
+    color: hsl(226, 34%, 48%);
+}
+    </style>
+    
+</head>
+<body>
+    
+    <main>
+        <div class="rating">
+            <div class="star">
+        <img src="icon-star.svg" alt="Rating Star">
+        </div><!--star img-->
+        <h1>How did we do?</h1>
+        <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering</p>
+
+        <form class="rating-form">
+            <input type="radio" name="rating" id="rating1" value="1">
+            <label for="rating1">1</label>
+
+            <input type="radio" name="rating" id="rating2" value="2">
+            <label for="rating2">2</label>
+
+            <input type="radio" name="rating" id="rating3" value="3">
+            <label for="rating3">3</label>
+
+            <input type="radio" name="rating" id="rating4" value="4">
+            <label for="rating4">4</label>
+
+            <input type="radio" name="rating" id="rating5" value="5">
+            <label for="rating5">5</label><br/>
+
+            <button type="submit">SUBMIT</button>
+        </form>
+        </div><!--rating form-->
+        </div><!--d first part-->
+        
+        <div class="thank-you hidden">
+            <div class="illu">
+        <img src="illustration-thank-you.svg" alt="Done">
+        </div><!--for the pic-->
+        <div class="selection-part">
+        <p class="selection"></p> <!--selection part-->
+        </div>
+        <h1>Thank you!</h1>
+        <p class="msg">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!
+        </p>
+        </div><!--second part-->
+
+        <footer>
+            <div class="attribution">
+              Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+              Coded by <a href="#">Abel Bliss</a>.
+            </div>
+          </footer>
+        
+    </main>
+    <script src="rate.js"></script>
+</body>
+</html>
